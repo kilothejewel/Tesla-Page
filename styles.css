@@ -1,0 +1,314 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #393c41;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 500;
+    letter-spacing: -0.5px;
+}
+
+p {
+    font-size: 14px;
+    color: #5c5e62;
+    padding-top: 6px;
+    padding-bottom: 14px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    z-index: 100;
+}
+
+.logo a {
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding-right: 18px;
+
+}
+
+
+.nav-links {
+    display: flex;
+    gap: 16px;
+}
+
+.nav-links a {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.nav-links a:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+
+.nav-right {
+    display: flex;
+    gap: 16px;
+    color: black;
+}
+
+.nav-right a {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.nav-right a:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.menu-btn {
+    display: none;
+
+}
+
+
+.section {
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    align-items: center;
+    scroll-snap-align: start;
+}
+
+
+html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+
+.header-text {
+    text-align: center;
+    padding-top: 15vh;
+}
+
+.header-text a {
+    border-bottom: 1px solid #5c5e62;
+    padding-bottom: 2px;
+}
+
+.header-text a:hover {
+    border-bottom: 2px solid #171a20;
+    color: #171a20;
+}
+
+
+.actions {
+    display: flex;
+    gap: 24px;
+    padding-bottom: 12vh;
+    width: 100%;
+    justify-content: center;
+}
+
+.btn {
+    width: 264px;
+    height: 40px;
+    border-radius: 4px;
+    border: none;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn:active {
+    transform: none;
+
+}
+
+.btn-primary {
+    background-color: rgba(0, 153, 255, 0.8);
+    color: white;
+}
+
+.btn-secondary {
+    background-color: rgba(244, 244, 244, 0.65);
+    color: #171a20;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+
+#model-y {
+    background-image: url('https://digitalassets.tesla.com/tesla-contents/image/upload/f_auto,q_auto/Homepage-Promo-Meet-Model-Y-Desktop.jpg');
+}
+
+
+.section-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    padding: 80px 40px;
+    background-color: #fff;
+}
+
+.model-card {
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.model-card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 32px;
+    background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 50%;
+}
+
+.card-content h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.card-content a {
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 14px;
+    opacity: 0.9;
+    border-bottom: 2px solid transparent;
+    width: fit-content;
+}
+
+.card-content a:hover {
+    border-bottom: 2px solid white;
+    opacity: 1;
+}
+
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.scroll-indicator svg {
+    width: 24px;
+    height: 24px;
+    fill: #171a20;
+}
+
+
+footer {
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    scroll-snap-align: center;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer li {
+    font-size: 12px;
+    color: #5c5e62;
+    font-weight: 500;
+}
+
+
+
+
+@media (max-width: 1000px) {
+    .nav-links {
+        display: none;
+
+    }
+
+    .menu-btn {
+        display: inline-block;
+        background-color: rgba(0, 0, 0, 0.05);
+        padding: 4px 12px;
+        border-radius: 4px;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 32px;
+    }
+
+    .actions {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        padding-bottom: 10vh;
+    }
+
+    .btn {
+        width: 90%;
+        max-width: 300px;
+    }
+    
+    .navbar {
+        padding: 0 16px;
+    }
+    
+    footer ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+}
